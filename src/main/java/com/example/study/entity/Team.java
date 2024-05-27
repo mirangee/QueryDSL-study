@@ -6,11 +6,9 @@ import lombok.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Getter
-@Setter
+@Getter @Setter
 @ToString(exclude = "members") @EqualsAndHashCode(of = "id")
-@NoArgsConstructor
-@AllArgsConstructor
+@NoArgsConstructor @AllArgsConstructor
 @Builder
 @Entity
 @Table(name = "tbl_team")
@@ -26,6 +24,4 @@ public class Team {
     @OneToMany(mappedBy = "team")
     @Builder.Default
     private List<Member> members = new ArrayList<>();
-
-
 }
