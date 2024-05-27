@@ -11,5 +11,3 @@ public interface MemberRepositoryCustom {
     List<Member> findUser(String nameParam, Integer ageParam);
 
 }
-
-
